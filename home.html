@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 11</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      header {
+        height: 20vh;
+        text-align: center;
+        background-color: #ff8787;
+      }
+      .container {
+        display: flex;
+      }
+      #sidebar {
+        background-color: #73c2fb;
+        height: 70vh;
+        width: 20%;
+        ul {
+          list-style-type: none;
+          display: none;
+          li {
+            padding: 0.5rem;
+            background-color: #1c7ed6;
+            margin: 0.5rem;
+            color: white;
+            a {
+              text-decoration: none;
+              color: white;
+            }
+          }
+        }
+        &:hover {
+          h1 {
+            display: none;
+          }
+          ul {
+            display: block;
+            cursor: pointer;
+          }
+        }
+      }
+      #content {
+        background-color: #ffd43b;
+
+        height: 70vh;
+        width: 80%;
+      }
+      img{
+        height: 15vh;
+      }
+      footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        background-color: #333;
+        color: #aaa;
+        padding: 2rem 4rem;
+        font-family: sans-serif;
+
+        .text {
+          display: grid;
+          gap: 1rem;
+          h1 {
+            color: #aaa;
+          }
+        }
+        a {
+          color: #aaa;
+        }
+        .social-icons a {
+          color: #aaa;
+          margin: 0 10px;
+          text-decoration: none;
+          font-size: 24px;
+        }
+        .social-icons a:hover {
+          color: #1c7ed6; /* Change to highlight color */
+        }
+        .email-box {
+          display: grid;
+          gap: 2rem;
+          place-content: center;
+          background-color: #424242;
+          padding: 1rem;
+        }
+        .email-box input[type="email"] {
+          padding: 10px;
+          font-size: 16px;
+          border: none;
+          outline: none;
+          width: 50%;
+        }
+        .email-box button {
+          padding: 10px;
+          background-color: #1c7ed6;
+          border: none;
+          color: white;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        .email-box button:hover {
+          background-color: #074c8c;
+        }
+        p {
+          color: #aaa;
+        }
+      }
+
+      form {
+        display: none;
+        position: absolute;
+        left: 20%;
+        text-align: left;
+      }
+      ::placeholder{
+        text-align: left;
+      }
+      #project1 {
+        display: none;
+      }
+      #project1:checked ~ form {
+        display: block !important;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Arfa Banyu Santoro</h1><img src="../assets/duck.jpeg" alt=""></header>
+    <div class="container">
+      <div id="sidebar">
+        <h1>sidebar</h1>
+        <ul>
+          <li>
+            <label for="project1"
+              >Project 1 <input type="checkbox" name="project1" id="project1" />
+              <form>
+                <label for="Nama">Nama</label
+                ><input
+                  type="text"
+                  placeholder="Nama belakang"
+                  name="Nama"
+                  id="Nama-depan"
+                /><input
+                  type="text"
+                  placeholder="Nama belakang"
+                  name="Nama"
+                  id="nama-belakang"
+                />
+                <br />
+                <label for="tel">No. Hp</label>
+                <input type="tel" name="tel" id="tel" placeholder="No. Hp" />
+                <br />
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="email"
+                />
+                <br />
+                <label for="gender">Gender</label>
+                <input type="radio" name="gender" id="pria" />Pria
+                <input type="radio" name="gender" id="wanita" />Wanita
+                <br />
+                <label for="jenjang">Jenjang</label>
+                <select name="jenjang" id="jenjang">
+                  <option value="tk">TK</option>
+                  <option value="sd">SD</option>
+                  <option value="smp">SMP</option>
+                  <option value="sma/smk">SMA/SMK</option>
+                </select>
+                <br />
+                <label for="hobi">Hobi</label>
+                <input type="checkbox" name="hobi" id="membaca" />Membaca<input
+                  type="checkbox"
+                  name="hobi"
+                  id="menggambar"
+                />Menggambar<input
+                  type="checkbox"
+                  name="menulis"
+                  id="menulis"
+                />Menulis
+                <br />
+                <label for="alamat">Alamat</label>
+                <textarea
+                  name="alamat"
+                  id="alamat"
+                  cols="46"
+                  rows="10"
+                ></textarea>
+                <br />
+                <button type="submit">kirim</button>
+              </form></label
+            >
+          </li>
+          <li>Project 2</li>
+          <li>Project 3</li>
+        </ul>
+      </div>
+      <div id="content">
+        <h1>content</h1>
+      </div>
+    </div>
+
+    <footer>
+      <div class="text">
+        <h1>UBER HOME</h1>
+        <p>
+          Copyright &copy; 2014 Uber J33. All Rights Reserved. Designed by
+          <a href="#">JoomIArt.com.Joomla!</a> is Free Software released under
+          the <a href="#">GNU General Public License</a>
+        </p>
+        <div class="social-icons">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+        </div>
+      </div>
+      <div class="email-box">
+        <p>
+          Subscribe to our email list and stay up-to-date with all our awesome
+          releases and latest updates.
+        </p>
+        <div>
+          <input type="email" placeholder="Type your email" />
+          <button type="button">Subscribe</button>
+        </div>
+      </div>
+      <p></p>
+    </footer>
+  </body>
+</html>
